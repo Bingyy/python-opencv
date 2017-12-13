@@ -36,9 +36,22 @@ def resize(image, width=None, height=None, inter=cv2.INTER_AREA):
 
 	return resized
 
-	
+# relatively easy for implementation
 # flipping
+def flip(image,flag):
+	'''
+	flag = 1: 水平翻转
+	flag = 0: 垂直翻转
+	flag = -1: 水平 & 垂直
+	'''
+	flipped = cv2.flip(image, flag)
+	return flipped
 
 # cropping
+# 这一部分的操作通过numpy的slice操作很容易实现
+def crop(image, x, y):
+	pass
+
+
 
 
